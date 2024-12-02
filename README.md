@@ -1,2 +1,2 @@
 # activation-distribution-analysis
-Analysis of post-residual activations from GPT2 small, medium, large and Pythia 160m, 410m, and 1b for sentences with pairs of subject:attribute 
+Analysis of post-residual activations from GPT2 small, medium, large and Pythia 160m, 410m, and 1b for sentences with pairs of subject:attribute. This was a research analysis. The code isn't designed to be particularly portable or reusable, but it should be relatively straightforward use. You just need to change the input folder names at the bottom of the script. I've included the data used and a requirements.txt with versions. I haven't tested but I would guess the version numbers don't need to be super strictly conformed to.
