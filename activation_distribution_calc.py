@@ -1120,7 +1120,7 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 # In[18]:
 
 
-sentences_dir = '/home/mattylev/projects/transformers/class_correlations/data'
+sentences_dir = './data'
 sf = open(sentences_dir + "/sentences_20241018_00_cut.json", 'r')
 sentences = json.load(sf)
 sentences = {k1 : {k2: [snt.rsplit(' ', 1)[0] for snt in sentences[k1][k2]] for k2 in sentences[k1].keys()} for k1 in sentences.keys()}
@@ -1134,7 +1134,7 @@ dnames = ['crystalball', 'genlogistic', 'gennorm', 'hypsecant', 'johnsonsb', 'jo
           'skewnorm', 't', 'truncnorm', 'vonmises', 'vonmises_line']
 
 load_all_sim_from_file = True
-output_base_dir = '/home/mattylev/projects/transformers/distributions/'
+output_base_dir = '.'
 fig_outdir = output_base_dir + '/figs'
 data_outdir = output_base_dir + '/raw_output' 
 n_bins = 150
