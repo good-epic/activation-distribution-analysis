@@ -1121,8 +1121,9 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 
 sentences_dir = './data'
-sf = open(sentences_dir + "/sentences_20241018_00_cut.json", 'r')
+sf = open(sentences_dir + "/sentences_20241018_00.json", 'r')
 sentences = json.load(sf)
+# remove the last word so it's more in context?
 sentences = {k1 : {k2: [snt.rsplit(' ', 1)[0] for snt in sentences[k1][k2]] for k2 in sentences[k1].keys()} for k1 in sentences.keys()}
 subjects = list(sentences.keys())
 attributes = list(set().union(*[set(d.keys()) for d in sentences.values()]))
